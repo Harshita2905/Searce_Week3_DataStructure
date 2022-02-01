@@ -1,0 +1,29 @@
+package sort;
+public class Bubble {
+    public void Operation(int arr[]) {
+        int n= arr.length;
+        for (int i = 0; i < n-1; i++) {
+            for (int j = 0; j < n-i-1; j++) {
+                if(arr[j]>arr[j+1]){
+                    int temp=arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1]=temp;
+                }
+            }
+        }
+    }
+    public void printarr(int arr[]) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]);
+            System.out.println(" ");
+        }
+    }
+    public static void main(String[] args) {
+        Bubble b= new Bubble();
+        int arr[]={64, 11,28,10,90};
+        b.Operation(arr);
+        System.out.println("sorted elements: ");
+        b.printarr(arr);
+    }
+    
+}
